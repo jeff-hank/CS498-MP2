@@ -8,9 +8,9 @@ app = Flask(__name__)
 def handle_get():
 	hostname = socket.gethostname()
 	address = socket.gethostbyname(hostname)
-    return str(address)
+	return str(address)
 
 @app.post('/')
 def handle_post():
 	p = subprocess.Popen(["python", "stress_cpu.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    return 'success'
+	return 'success'
