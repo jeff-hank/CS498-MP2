@@ -13,4 +13,4 @@ def handle_get():
 @app.post('/')
 def handle_post():
 	p = subprocess.Popen(["python3", "stress_cpu.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-	return 'success'
+	return '200'
